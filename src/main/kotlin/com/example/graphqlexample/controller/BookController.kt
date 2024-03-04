@@ -24,10 +24,10 @@ class BookController {
         return "Book 222 "
     }
 
-    @SubscriptionMapping
-    fun bookchange(): Flux<Long> {
-        return Flux.interval(Duration.ofSeconds(1))
-    .map { i -> i }
+    @SubscriptionMapping("bookchange")
+    fun bookchange2(): Flux<Long> {
+        return Flux.interval(Duration.ofSeconds(5))
+    .map { tick -> tick + 1 }
     }
 
 }

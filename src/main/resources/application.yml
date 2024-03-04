@@ -3,6 +3,11 @@ spring:
     graphiql:
       enabled: true
       path: /graphiql
+    websocket:
+      path: /graphql
+    cors:
+      allowed-origins: "*"
+  log: TRACE
 
   datasource:
     url: jdbc:postgresql://localhost:5432/graphql_example

@@ -19,11 +19,17 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.data:spring-data-jpa:3.2.3")
 
+	implementation("org.springframework.data:spring-data-jpa:3.2.3")
+    implementation("com.graphql-java:graphql-java-extended-scalars:21.0")
 	implementation("org.springframework.boot:spring-boot-starter-graphql")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	implementation("org.springframework.boot:spring-boot-starter-websocket")
+    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+	implementation("com.graphql-java:graphql-java")
+	implementation("com.apollographql.federation:federation-graphql-java-support:3.0.1")
+
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")

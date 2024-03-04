@@ -3,8 +3,9 @@ type Query {
     books: [String]
 }
 
+
 type Subscription {
-    bookchange: Int
+    bookchange: String
 }
 
 type Book {
